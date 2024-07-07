@@ -5,6 +5,7 @@
     "license": "GNU General Public License v2.0",
     "url": "https://github.com/qwqcode/SubRenamer/releases/download/v2.0.0/SubRenamer_windows_amd64.zip",
     "hash": "2772bc28a3e0fc37814a8517ac5fe3a552ec55f7f7b6e3e696ce41f9fc76fd06",
+    "extract_dir": "SubRenamer",
     "shortcuts": [
         [
             "SubRenamer.exe",
