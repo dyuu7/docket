@@ -1,5 +1,5 @@
 param(
-    [String]$upstream = "dorian-li/docket:main"
+    [String]$upstream = "dyuu7/docket:main"
 )
 
 if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Convert-Path (scoop prefix scoop) }
