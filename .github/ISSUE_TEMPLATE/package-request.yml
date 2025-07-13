@@ -11,14 +11,14 @@ body:
       required: true
 - type: checkboxes
   attributes:
-    label: Criteria
-    description: For a package to be acceptable in this bucket, it should be
+    label: Request criteria
+    description: Please confirm that the request fits this personal bucket.
     options:
-    - label: Criteria 1
+    - label: An official Windows release and a direct upstream download source are available.
       required: true
-    - label: Criteria 2
+    - label: The package is maintained, or the requested release is stable and reproducible.
       required: true
-    - label: Criteria 3
+    - label: The request includes enough information to identify the application and its upstream project.
       required: true
 - type: input
   attributes:
@@ -41,12 +41,12 @@ body:
 - type: input
   attributes:
     label: Download Link(s)
-    description: URI(s) of the package's download(s)
+    description: Direct URI(s) of the official package download(s), if known.
   validations:
     required: true
 - type: textarea
   attributes:
-    label: Some Indication of Popularity/Repute
-    description: GitHub stars/software reviews etc.
+    label: Upstream status and additional context
+    description: Share the release page, latest version, maintenance status, or any other useful context.
   validations:
-    required: true
+    required: false

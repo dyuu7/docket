@@ -1,19 +1,43 @@
 name: 🔢 Hash Error
-description: Open an issue about a package's hash is incorrect.
+description: Report a hash mismatch for a package download.
+title: "[Hash]: "
 labels: ["bug"]
 body:
 - type: checkboxes
   attributes:
     label: Prerequisites
     options:
-    - label: I have used the predefined issue title. (e.g. "xxx@xxx&#58; hash check failed")
+    - label: I am using the latest version of Scoop and the latest docket bucket.
       required: true
-    - label: I have verified that I am using the latest version of Scoop and corresponding bucket.
+    - label: I have retried the download and confirmed the mismatch is reproducible.
       required: true
 - type: input
   attributes:
-    label: Package Name and Version
-    description: Name and version of package (install name) which has incorrect hash.
-    placeholder: e.g. 7zip@21.00 (not '7-Zip')
+    label: Package Name
+    description: The manifest or install name that reports the mismatch.
+    placeholder: e.g. Fanhuaji
   validations:
     required: true
+- type: input
+  attributes:
+    label: Version and Architecture
+    description: Include the version and architecture selected by Scoop.
+    placeholder: e.g. 1.6.0, 32bit
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Hash Error
+    description: Paste the complete Scoop output, including the download URL and expected hash.
+    render: console
+    placeholder: |
+      scoop install docket/<package>
+      # Paste the complete hash mismatch output here.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional Context
+    description: Include a release link or a separately calculated SHA-256 if available.
+  validations:
+    required: false
